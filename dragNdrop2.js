@@ -81,7 +81,7 @@ function koreanBox() { //한글창
     // let koreaText = document.createTextNode(korean)
     // boxs.appendChild(koreaText)
 
-    document.body.wrapper.appendChild(boxs)
+    // document.body.wrapper.appendChild(boxs)
 }
 
 function resultBox() { //결과창
@@ -93,8 +93,8 @@ function resultBox() { //결과창
         newDiv.setAttribute("id", "resultDiv");
         let boxs = document.getElementById('resultbox')
         boxs.appendChild(newDiv) 
-        wrapper.appendChild(boxs)
-        document.body.appendChild(wrapper)
+        // wrapper.appendChild(boxs)
+        // document.body.wrapper.appendChild(boxs)
     }
     
 }
@@ -113,7 +113,7 @@ function initCards() {
         let boxs = document.getElementById('box')
         boxs.appendChild(newDiv)
         // let contain = document.getElementById('container')
-        document.body.wrapper.appendChild(wrapper);
+        // document.body.wrapper.appendChild(wrapper);
       }
     
 }
