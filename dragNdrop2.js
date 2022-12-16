@@ -195,7 +195,7 @@ function dropandDrag(){
            box.addEventListener("drop", onDropBox);
        }
        document.getElementById('onclick').addEventListener('click', checkResult)
-       document.getElementById('1click').addEventListener('click', initCards)
+       document.getElementById('click').addEventListener('click', initCards)
 }
 
 
