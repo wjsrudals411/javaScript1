@@ -11,12 +11,12 @@
 }
 
 #resultDiv {
- border-bottom: 3px dotted #b393d3;
- 
- width: 80px;
- height: 50px;
- margin: 10px;
- padding: 10px;
+    border-bottom: 3px dotted #b393d3;
+    
+    width: 80px;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
 }
 #resultbox {
     background-color:transparent;
