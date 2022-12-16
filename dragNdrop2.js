@@ -95,6 +95,7 @@ function resultBox() { //결과창
         boxs.appendChild(newDiv) 
         // wrapper.appendChild(boxs)
         // document.body.wrapper.appendChild(boxs)
+        
     }
     
 }
@@ -115,6 +116,7 @@ function initCards() {
         // let contain = document.getElementById('container')
         // document.body.wrapper.appendChild(wrapper);
       }
+      dropandDrag();
     
 }
 function removeText() {
@@ -167,6 +169,35 @@ function start() {
       
 }
 
+function dropandDrag(){
+       //card 객체에 event handler를 연결한다.
+       let cards = document.querySelectorAll("#card")
+       for(let card of cards) {
+           card.addEventListener("dragstart", onDragStartCard);
+           card.addEventListener("dragend", onDragEndCard);
+           card.addEventListener("dragover", onDragOverCard);
+           card.addEventListener("dragleave", onDragLeaveCard);
+           
+       }
+   
+       //box 객체에 event handler를 연결한다
+       
+       let boxes = document.querySelectorAll("#box");
+       let result = document.querySelectorAll("#resultDiv")
+       for(let box of result) {
+           box.addEventListener("dragover", onDragOverBox);
+           box.addEventListener("dragleave", onDragLeaveBox);
+           box.addEventListener("drop", onDropBox);
+       }
+       for(let box of boxes) {
+           box.addEventListener("dragover", onDragOverBox);
+           box.addEventListener("dragleave", onDragLeaveBox);
+           box.addEventListener("drop", onDropBox);
+       }
+       document.getElementById('onclick').addEventListener('click', checkResult)
+       document.getElementById('1click').addEventListener('click', initCards)
+}
+
 
 
 //=======================================================
@@ -175,38 +206,10 @@ function start() {
 window.onload = function() {
 
 
-    
-    
-
     start();    
+    dropandDrag();
     
-    
-    //card 객체에 event handler를 연결한다.
-    let cards = document.querySelectorAll("#card")
-    for(let card of cards) {
-        card.addEventListener("dragstart", onDragStartCard);
-        card.addEventListener("dragend", onDragEndCard);
-        card.addEventListener("dragover", onDragOverCard);
-        card.addEventListener("dragleave", onDragLeaveCard);
-        
-    }
-
-    //box 객체에 event handler를 연결한다
-    
-    let boxes = document.querySelectorAll("#box");
-    let result = document.querySelectorAll("#resultDiv")
-    for(let box of result) {
-        box.addEventListener("dragover", onDragOverBox);
-        box.addEventListener("dragleave", onDragLeaveBox);
-        box.addEventListener("drop", onDropBox);
-    }
-    for(let box of boxes) {
-        box.addEventListener("dragover", onDragOverBox);
-        box.addEventListener("dragleave", onDragLeaveBox);
-        box.addEventListener("drop", onDropBox);
-    }
-    document.getElementById('onclick').addEventListener('click', checkResult)
-    document.getElementById('1click').addEventListener('click', initCards)
+ 
    
     
 
