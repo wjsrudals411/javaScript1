@@ -169,6 +169,20 @@ function start() {
       
 }
 
+function move(){
+    var elem = document.getElementById("bar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame(){
+        if(width >=100){
+            //alert("문제를 모두 풀었습니다.");
+        } else{
+            width++;
+            elem.style.width = count*10 + '%';
+        }
+    }
+}
+
 function dropandDrag(){
        //card 객체에 event handler를 연결한다.
        let cards = document.querySelectorAll("#card")
@@ -195,7 +209,9 @@ function dropandDrag(){
            box.addEventListener("drop", onDropBox);
        }
        document.getElementById('onclick').addEventListener('click', checkResult)
+       document.getElementById('onclick').addEventListener('click', move)
        document.getElementById('1click').addEventListener('click', initCards)
+
 }
 
 

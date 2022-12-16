@@ -85,3 +85,19 @@ h1{
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.4);
 }
+#progress{
+    text-align: center;
+}
+#progress{
+    position: relative;
+    width: 660px;
+    height: 30px;
+    background-color: #ddd;
+}
+
+#bar{
+    position: absolute;
+    width: 0%;
+    height: 30px;
+    background-color: #4caf50;
+}
